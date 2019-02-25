@@ -1,17 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
   margin: 0;
+  font-family: 'Raleway';
   font-size: 16px;
   line-height: 1.8em;
-  font-family: "Lato", sans-serif;
+}
+
+a {
+  color: #1C9C94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 article {
   padding:0 1em;
 }
 
-section {
+section{
   margin: 1em;
   padding: 1em;
 }
@@ -23,16 +32,14 @@ header, main, footer {
 header {
   padding: 2em;
   text-align: center;
-  background-image: url(img/bg.jpg);
+  background-image: url("img/6220876ed8bb62200fe012198917738c.jpg");
   background-size: cover;
-  background-position: fixed;
-  background-repeat: no-repeat;
   color: white;
 }
 
 header section {
   margin: 0 auto;
-  width: 640px;
+  max-width: 640px;
 }
 
 header img {
@@ -41,8 +48,16 @@ header img {
 }
 
 h1 {
-  margin: 1em 0;
   text-transform: uppercase;
+  margin: 1em 0;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h3, h4 {
+  font-weight: bold;
 }
 
 main {
@@ -50,12 +65,20 @@ main {
 }
 
 main section:not(:last-child) {
-  border-bottom: 2px dotted #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-h3 {
-  text-transform: uppercase;
-  font-weight: bold;
+.fab {
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 5px;
+  text-align: center;
+}
+
+a .fab {
+  color: white;
 }
 
 .course, .skills {
@@ -83,7 +106,7 @@ h3 {
 }
 
 .skills .column {
-  -ms-flex: 0 0 50%;
+  -ms-flex: 0 0 50%%;
   flex: 0 0 50%;
   max-width: 50%;
 }
@@ -98,23 +121,26 @@ h3 {
   color: #509e98;
 }
 
-.school span {
-  color: #A7B8BF;
-  text-decoration-line: underline;
+.school, .job-title {
+  text-transform: capitalize;
 }
 
-a {
-  color: inherit;
+.school span, .job-title span {
+  color: #889499;
+  text-decoration: underline;
 }
 
-a:hover {
-  color: rgb(8, 111, 155);
+ul.job-description li:before{
+  content: "✔";
+  padding-right: 0.5em;
+  color: #509e98;
 }
 
 footer {
- padding: 1em;
- text-align: right;
+ padding: 1em 1.5em;
  background: #A7B8BF;
+ color: white;
+ text-align: right;
 }
 
 @media only screen and (max-width: 768px) {
