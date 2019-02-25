@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-  background-image: url("img/6220876ed8bb62200fe012198917738c.jpg");
+  background-image: url("img/2082906.jpg");
   background-size: fixed;
   background-repeat: round;
   background-attachment: fixed;
@@ -68,7 +68,7 @@ h3, h4 {
 main {
   max-width: 980px;
   background: white;
-  opacity: 0.7;
+  opacity: 0.9;
   padding: 0.25em 0;
   margin-bottom: 1em;
 }
