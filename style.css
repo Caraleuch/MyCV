@@ -1,17 +1,17 @@
-/* import url("https://fonts.googleapis.com/css?family=Lato"); */
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 body {
   margin: 0;
   font-size: 16px;
   line-height: 1.8em;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 article {
   padding:0 1em;
 }
 
-section{
+section {
   margin: 1em;
   padding: 1em;
 }
@@ -25,7 +25,7 @@ header {
   text-align: center;
   background-image: url(img/bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: fixed;
   background-repeat: no-repeat;
   color: white;
 }
@@ -37,7 +37,7 @@ header section {
 
 header img {
   border-radius: 50%;
-  width: 150px;
+  max-width: 150px;
 }
 
 h1 {
@@ -49,19 +49,94 @@ main {
   max-width: 1140px;
 }
 
-.course {
+main section:not(:last-child) {
+  border-bottom: 2px dotted #ccc;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.course, .skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .course .title {
+  color: #509e98;
+  -ms-flex: 0 0 33.3%;
+  flex: 0 0 33.3%;
+  max-width: 33%;
 }
 
 .course .descrition {
+  -ms-flex: 0 0 66.6%;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.course .descrition p {
+  padding-left: 1em;
+}
+
+.skills .column {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.skills .column ul, ul.job-description {
+  list-style-type: none;
+}
+
+.skills .column ul > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #509e98;
 }
 
 .school span {
   color: #A7B8BF;
+  text-decoration-line: underline;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: rgb(8, 111, 155);
 }
 
 footer {
  padding: 1em;
+ text-align: right;
+ background: #A7B8BF;
+}
+
+@media only screen and (max-width: 768px) {
+  .course {
+    display: block;
+  }
+
+  .course .title, .course .descrition {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .skills {
+    display: block;
+  }
+
+  .skills .column {
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
