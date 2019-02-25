@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
+  background-image: url("img/6220876ed8bb62200fe012198917738c.jpg");
+  background-size: fixed;
+  background-repeat: round;
+  background-attachment: fixed;
   margin: 0;
-  font-family: 'Raleway';
+  font-family: "Lato";
   font-size: 16px;
   line-height: 1.8em;
 }
 
 a {
-  color: #1C9C94;
   text-decoration: none;
+  font-weight: bold;
+  color: inherit;
 }
 
 a:hover {
@@ -20,7 +25,7 @@ article {
   padding:0 1em;
 }
 
-section{
+section {
   margin: 1em;
   padding: 1em;
 }
@@ -31,15 +36,15 @@ header, main, footer {
 
 header {
   padding: 2em;
-  text-align: center;
-  background-image: url("img/6220876ed8bb62200fe012198917738c.jpg");
-  background-size: cover;
   color: white;
+  text-align: center;
+  font-family: "Laila", sans-serif;
 }
 
 header section {
   margin: 0 auto;
   max-width: 640px;
+  background: none;
 }
 
 header img {
@@ -61,11 +66,15 @@ h3, h4 {
 }
 
 main {
-  max-width: 1140px;
+  max-width: 980px;
+  background: white;
+  opacity: 0.7;
+  padding: 0.25em 0;
+  margin-bottom: 1em;
 }
 
-main section:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+main section {
+  border: 2px dashed #ccc;
 }
 
 .fab {
@@ -95,18 +104,19 @@ a .fab {
   max-width: 33%;
 }
 
-.course .descrition {
+.course .description {
   -ms-flex: 0 0 66.6%;
   flex: 0 0 66.6%;
   max-width: 66.6%;
 }
 
-.course .descrition p {
+.course .description p {
   padding-left: 1em;
+  margin-top: 0;
 }
 
 .skills .column {
-  -ms-flex: 0 0 50%%;
+  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
@@ -138,7 +148,8 @@ ul.job-description li:before{
 
 footer {
  padding: 1em 1.5em;
- background: #A7B8BF;
+ background: rgb(55, 26, 82);
+ opacity: 0.4;
  color: white;
  text-align: right;
 }
