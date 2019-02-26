@@ -3,12 +3,12 @@
 body {
   background-image: url("img/2082906.jpg");
   background-size: fixed;
-  background-repeat: round;
   background-attachment: fixed;
   margin: 0;
   font-family: "Lato";
   font-size: 16px;
   line-height: 1.8em;
+  min-width: 254px;
 }
 
 a {
@@ -28,28 +28,20 @@ article {
 section {
   margin: 1em;
   padding: 1em;
+  border: 2px dashed #ccc;
 }
 
-header, main, footer {
+main, footer {
   margin: 0 auto;
 }
 
 header {
+  background-image: linear-gradient(to top, rgba(227, 226, 231, 0), rgb(7, 51, 146));
   padding: 2em;
-  color: white;
   text-align: center;
   font-family: "Laila", sans-serif;
-}
-
-header section {
-  margin: 0 auto;
-  max-width: 640px;
-  background: none;
-}
-
-header img {
-  border-radius: 50%;
-  max-width: 150px;
+  color: white;
+  max-width: 100%;
 }
 
 h1 {
@@ -69,12 +61,8 @@ main {
   max-width: 980px;
   background: white;
   opacity: 0.9;
-  padding: 0.25em 0;
+  padding: 0 0 2px 0;
   margin-bottom: 1em;
-}
-
-main section {
-  border: 2px dashed #ccc;
 }
 
 .fab {
@@ -86,10 +74,6 @@ main section {
   text-align: center;
 }
 
-a .fab {
-  color: white;
-}
-
 .course, .skills {
   display: -ms-flexbox;
   display: flex;
@@ -98,7 +82,7 @@ a .fab {
 }
 
 .course .title {
-  color: #509e98;
+  color: rgb(7, 51, 146);
   -ms-flex: 0 0 33.3%;
   flex: 0 0 33.3%;
   max-width: 33%;
@@ -115,20 +99,28 @@ a .fab {
   margin-top: 0;
 }
 
+.skills {
+  padding: 1em;
+}
+
 .skills .column {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
 
-.skills .column ul, ul.job-description {
+ul {
   list-style-type: none;
 }
 
-.skills .column ul > li:before {
+li:before {
   content: "►";
   padding-right: 0.5em;
-  color: #509e98;
+  color: rgb(7, 51, 146);
+}
+
+.edu {
+  padding-bottom: 1em;
 }
 
 .school, .job-title {
@@ -136,19 +128,13 @@ a .fab {
 }
 
 .school span, .job-title span {
-  color: #889499;
+  color: rgb(7, 51, 146);
   text-decoration: underline;
-}
-
-ul.job-description li:before{
-  content: "✔";
-  padding-right: 0.5em;
-  color: #509e98;
 }
 
 footer {
  padding: 1em 1.5em;
- background: rgb(55, 26, 82);
+ background: rgb(34, 26, 82);
  opacity: 0.4;
  color: white;
  text-align: right;
